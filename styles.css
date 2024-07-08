@@ -1,0 +1,181 @@
+
+body{
+    background: black;
+}
+h1{
+    color: red;
+    font-size: 70px;
+    background: green;
+}
+#face{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(111, 0, 255);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin: auto;
+    margin-top:150px;
+    display: flex;
+
+}
+#leye,#reye{
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    margin: auto;
+
+}
+#larm,#rarm{
+    height: 100px;
+    width: 25px;
+    margin-top: 18px ;
+    border-radius: 50px;
+    background-color: chartreuse;
+}
+#center{
+    height: 300px;
+    width: 200px;
+    background: rgba(255, 0, 212, 0.863);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+}
+#body{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 15px;
+}
+#legs{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: auto;
+    margin-top: -18px;
+}
+#llegs,#rlegs{
+    height: 100px;
+    width: 25px;
+    background: chartreuse;
+    margin-top: 0px;
+    margin:auto;
+    border-radius: 50px;   
+}
+#main{
+    height: 800px;
+    width: 350px;
+    border: 5px solid rgb(13, 180, 247);
+    margin-top: 100px;
+    margin: auto;
+    background: blueviolet;
+}
+#main:hover #face{
+    animation: changeface 0.0s 30;
+    background-color: rgb(189, 240, 7);
+    height: 250px;
+    width: 150px;
+}
+@keyframes changeface{
+    0%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(360deg);
+        transform-origin:top center;
+    }
+}
+#main:hover #llegs {
+    animation: changelegs 0.5s 20;
+    background-color: rgb(12, 181, 248);
+    height: 100px;
+    width: 30px;
+}
+
+@keyframes changelegs {
+    0%{
+        transform:center(0deg) ;
+        transform-origin: ( top center);
+    }
+    100%{
+        transform: rotate(270deg);
+        transform-origin: ( top center) ;
+    }
+    
+}
+#main:hover #rlegs{
+    animation: changelegs 0.5s 20;
+    background-color: white;
+    height: 100px;
+    width: 30px;
+}
+@keyframes changelegs {
+    0%{
+        transform:center(0deg) ;
+        transform-origin: ( top center);
+    }
+    100%{
+        transform: rotate(270deg);
+        transform-origin: ( top center) ;
+    }
+    
+}
+#main:hover #rarm{
+    animation: changecenter 0.5s 5;
+    height: 150px;
+    width: 40px;
+}
+@keyframes changecenter{
+    0%{
+        transform: rotate(0deg);
+        transform-origin:top center ;
+    }
+    50%{
+        transform: rotate(180deg);
+        transform-origin:top center ;
+
+    }
+    
+    100%{
+        transform: rotate(270deg);
+        transform-origin: bottom center;
+    }
+}
+#main:hover #larm{
+        animation: changecenter 0.5s 20;
+        height: 150px;
+        width: 40px;
+}
+@keyframes changecenter{
+        0%{
+            transform: rotate(0deg);
+            transform-origin:top center ;
+        }
+        50%{
+            transform: rotate(180deg);
+            transform-origin:top center ;
+    
+        }
+        100%{
+            transform: rotate(270deg);
+            transform-origin: bottom center;
+        }        
+}
+#main:hover #center{
+    animation: map 0.5s 12;
+    background-color:rgb(28, 12, 252);
+    height: 150px;
+    width: 100px;
+}
+@keyframes map{
+    0%{
+        transform: rotate(0deg);
+        transform-origin: top center;
+    }
+    100%{
+        transform: rotate(180deg);
+        transform-origin: bottom center;
+    }
+}
